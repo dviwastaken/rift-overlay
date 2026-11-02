@@ -1,0 +1,32 @@
+# Derleme çıktıları
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.exe
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# LiveApiProbe'un çalışırken diske yazdığı ham API dökümleri
+probe-*.json
+
+# NuGet
+*.nupkg
+packages/
+
+# İşletim sistemi
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Yerel çalışma durumu
+.omc/

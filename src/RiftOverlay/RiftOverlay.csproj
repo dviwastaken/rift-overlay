@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>RiftOverlay</AssemblyName>
+    <RootNamespace>RiftOverlay</RootNamespace>
+    <AssemblyTitle>RiftOverlay</AssemblyTitle>
+    <Product>RiftOverlay</Product>
+
+    <!--
+      Compiled into the executable's Win32 resources. The tray reads its icon back out of our own
+      exe with ExtractIconEx, so there is exactly one copy and the tray can never drift from the
+      window and taskbar icon.
+    -->
+    <ApplicationIcon>Assets\RiftOverlay.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.10" />
+    <!--
+      Microsoft.Data.Sqlite 10.0.10 pulls SQLitePCLRaw 2.1.11 transitively, and that build of the
+      native SQLite library carries GHSA-2m69-gcr7-jv3q. Referencing the patched 2.1.13 directly
+      overrides the transitive pick without moving to the 3.x line, which is a larger jump than
+      Microsoft.Data.Sqlite expects. Drop this once the parent package ships a fixed default.
+    -->
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.13" />
+  </ItemGroup>
+
+</Project>

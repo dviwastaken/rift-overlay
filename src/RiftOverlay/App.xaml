@@ -1,0 +1,16 @@
+<Application x:Class="RiftOverlay.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             ShutdownMode="OnExplicitShutdown">
+    <!--
+        OnExplicitShutdown, OnMainWindowClose degil: overlay artik tray'e kapaniyor ve client
+        penceresi kapandiginda da surec ayakta kalmali. Cikis yalnizca tray menusunden.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

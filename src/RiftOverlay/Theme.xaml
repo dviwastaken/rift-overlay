@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--
+        Iki pencerenin gercekten paylastigi sey: renk kelime dagarcigi ve metin tonlari.
+        Kart zemini burada YOK ve bilerek yok — overlay'inki yari saydam (oyunun ustunde duruyor),
+        client'inki opak. Ikisini tek anahtara zorlamak, birinde yanlis gorunen bir renk uretirdi.
+    -->
+
+    <SolidColorBrush x:Key="PrimaryText" Color="#FFEFF3F8" />
+    <SolidColorBrush x:Key="MutedText" Color="#FF8B95A6" />
+    <SolidColorBrush x:Key="CardBorder" Color="#33FFFFFF" />
+
+    <SolidColorBrush x:Key="Accent" Color="#FFF2C14E" />
+    <SolidColorBrush x:Key="AccentAlt" Color="#FF4FC9C0" />
+
+    <!-- Kazandi/kaybetti. Palette.Ready ve Palette.Enemy ile ayni degerler: ayni kavram iki
+         yuzeyde de ayni renkte gorunsun. -->
+    <SolidColorBrush x:Key="Positive" Color="#FF5BD98A" />
+    <SolidColorBrush x:Key="Negative" Color="#FFE8685F" />
+
+    <Style x:Key="Caption" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="Foreground" Value="{StaticResource MutedText}" />
+    </Style>
+
+</ResourceDictionary>
